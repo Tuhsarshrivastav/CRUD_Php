@@ -1,8 +1,7 @@
-<?php
-   include "./includes/class-autoload.inc.php";
- require_once('./templates/header.php')
+<?php 
+  include "./includes/class-autoload.inc.php";
+  require_once("./templates/header.php");
 ?>
-
 <div class="text-center">
   <button class="my-5 btn btn-primary" data-toggle="modal" data-target="#addPostModal">Craete Post</button>
 </div>
@@ -42,8 +41,7 @@
   </div>
 </div>
 
-
- <div class="row">
+<!-- <div class="row">
   <div class="col-md-6">
     <div class="card">
       <div class="card-body">
@@ -65,9 +63,31 @@
       <button class="btn btn-danger">Delete</button>
     </div>
   </div>
-</div> 
+</div> -->
 
+<div class="row">
+  <?php 
+    $posts = new Posts();
+    if($posts->getPost()) {
+      foreach($posts->getPost() as $post) {
+        echo '<div class="col-md-6 mt-4">';
+        echo '<div class="card">';
+        echo '<div class="card-body">';
+        echo "<h5 class='card-title'>" . $post['title'] . "</h5>";
+        echo "<p class='card-text'>" . $post['body'] . "</p>";
+        echo "<h6 class='card-subtitle text-muted text-right'>Author: " . $post['author'] . "</h6>";
+        echo "<a  href='editForm.php?id=" . $post['id'] . "' class='btn btn-warning'>Edit</a> ";
+        echo "<a href='post.process.php?send=del&id=" . $post['id'] . "' class='btn btn-danger'>Delete</a>";
+        echo "</div>";
+        echo "</div>";
+        echo "</div>";
+      }
+    }  else {
+      echo "<p class='mt-5 mx-auto'>Post is empty...</p>";
+    }
+  ?>
+</div>
 
-<?php
- require_once('./templates/footer.php')
+<?php 
+  require_once("./templates/footer.php");
 ?>
