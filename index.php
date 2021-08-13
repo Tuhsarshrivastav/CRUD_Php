@@ -40,6 +40,33 @@
     </div>
   </div>
 </div>
+
+
+ <div class="row">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Post One</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, molestias distinctio? Maxime non deserunt praesentium nihil ipsum, eaque adipisci a accusamus ut officia iure nisi sit, quod voluptas officiis modi.</p>
+        <h6 class="card-subtitle text-muted text-right">Author: Candra</h6>
+        <button class="btn btn-warning">Edit</button>
+        <button class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Post Two</h5>
+      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, molestias distinctio? Maxime non deserunt praesentium nihil ipsum, eaque adipisci a accusamus ut officia iure nisi sit, quod voluptas officiis modi.</p>
+      <h6 class="card-subtitle text-muted text-right">Author: John DOe</h6>
+      <button class="btn btn-warning">Edit</button>
+      <button class="btn btn-danger">Delete</button>
+    </div>
+  </div>
+</div> 
+
+
 <?php
  require_once('./templates/footer.php')
 ?>
